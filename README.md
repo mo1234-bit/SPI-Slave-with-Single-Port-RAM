@@ -2,30 +2,14 @@
 This project implements a SPI (Serial Peripheral Interface) slave module with a single port RAM block. The SPI slave module receives data from a master device and communicates with the single port RAM to store and retrieve data.
 ![SYSTEM LEVEL](https://drive.google.com/uc?export=view&id=1EHmCvaM_t_xybyCshayAZgYSlHrNebHS)
 
-### Project Overview
+### Project Overvie
 The project consists of the following:-
-1. Codes folder:
-    which contain the following 
-	+ ram.dat: which represents the memory for the testbench
 	+ run.do: do file to run simulation in QuestaSim or ModelSim
-	+ RTL folder:
 		+ SPI.v: design of SPI block
 		+ RAM.v: design of RAM block
-		+ instantiation.v: top module
+		+ project.v: top module
 		+ run.tcl: tcl file to run design on Vivado and extract elaboration_shcematic.pdf, synthesized_shcematic.pdf, utilization report and report timing
 			   in addition to run  elaboration, synthesis, implementation and generates bitstream file
-	+ Testbench folder:
-		+ SPI.v: Verilog file represent SPI Slave block
-    		+ RAM.v: Verilog file represent Single Port Async RAM
-    		+ SystemLevel.v: Verilog file instantiate the two blocks RAM and SPI
-		+ ram.dat: memory for testbench
-2. schematic pdf:
-    + SPI schematic: schematic for the block after synthesis on Vivado 
-    + RAM schematic: schematic for the block after synthesis on Vivado 
-    + System Level schematic: schematic for the block after synthesis on Vivado
-4. basys_master.xdc: a constrain file for the target FPGA
-5. bitstream file: bitstream file
-6. netlist file: netlist file from Vivado
 
 ## SPI Slave Module
 The SPI slave module is responsible for receiving data from the master device and interacting with the RAM module. It has the following ports:
@@ -78,31 +62,7 @@ The single port asynchronous RAM module implements a memory block with a single 
 ### FSM "Finite State Machine"
 ![FSM](https://drive.google.com/uc?export=view&id=1hf9omcZ275hoKuVw7Ol5CuG-cZuh6jIJ)
 
-## Testbenches
-The project includes the following testbenches:
 
-+ SPI_tb.sv: SystemVerilog testbench for the SPI module.
-+ RAM_tb.sv: SystemVerilog testbench for the RAM module.
-+ SystemLevel_tb.sv: SystemVerilog testbench for the SystemLevel module.
-
-These testbenches can be used to verify the functionality and performance of the SPI slave and single port RAM modules.
-
-## Getting Started
-To get started with this repository, follow these steps:
-
-1. Clone the repository to your local machine using the following command:
-```ruby
-git clone https://github.com/Abdelrahman1810/SPI_Slave_with_Single_Port_RAM.git
-```
-2. Open QuestaSim and navigate to the directory where the repository is cloned.
-3. Compile the Verilog files by executing the following command in the QuestaSim transcript tap: 
-```ruby
-do run.do
-```
-This will compile the SPI.v, RAM.v, SystemLevel.v, tb_SPI.sv, tb_RAM.sv, tb_SystemLevel.sv, files and run the simulation with tb_SystemLevel.v file.
-
-> [!IMPORTANT]
-> You need to download [QuestaSim](https://support.sw.siemens.com/en-US/) and [Vivado](https://www.xilinx.com/support/download.html) first.
 
 ## Using Vivado
 If you want to synthesize and implement the DSP48A1 design on an FPGA device using Vivado, follow these additional steps:
@@ -124,26 +84,6 @@ source run.tcl
 > [!NOTE]
 > constrain file written for specific FPGA "XC7A35TICPG236".
 
-## Contributing
-If you find any issues or have suggestions for improvement, feel free to submit a pull request or open an issue in the repository. Contributions are always welcome!
 
-## Contact info 💜
 
-<a href="http://wa.me/201061075354" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/whatsapp-128C7E.svg?style=for-the-badge&logo=whatsapp&logoColor=white" /></a> 
-
-<a href="https://www.linkedin.com/in/abdelrahman-mohammed-814a9022a/" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/linkedin-0077b5.svg?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-
-Gmail : abdelrahmansalby23@gmail.com 📫
-
-### this project from Eng.Kareem Waseem diploma
-  <tbody>
-    <tr>
-      <td align="left" valign="top" width="14.28%">
-      <a href="https://www.linkedin.com/in/kareem-waseem/"><img src="https://media.licdn.com/dms/image/C5603AQGwfgJJNpo8MQ/profile-displayphoto-shrink_800_800/0/1549202493548?e=1721865600&v=beta&t=9azKJacf-SZ18LX4UHwEa4gYKDCTIqLEwEDFWIu19Ko" width="100px;" alt="Kareem Waseem"/><br /><sub><b>Kareem Waseem</b></sub></a>
-      <br /><a href="kwaseem94@gmail.com" title="Gmail">📧</a> 
-      <a href="https://www.linkedin.com/in/kareem-waseem/" title="LinkedIn">🌍</a>
-      <a href="https://linktr.ee/kareemw" title="Talks">📢</a>
-      <a href="https://www.facebook.com/groups/319864175836046" title="Facebook grp">💻</a>
-      </td>
-    </tr>
-  </tbody>
+    
