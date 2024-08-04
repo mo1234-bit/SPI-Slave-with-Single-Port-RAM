@@ -74,10 +74,7 @@ always@(*)begin
     	WRITE:begin
     	       if(counter>=0)begin
                 rx_data [counter] <= MOSI;
-                counter <= counter - 1 ;     
-                if(counter == 0) begin
-                    counter <= 10;  
-                    rx_valid <= 1;
+             1;
                 end    else if(counter!=0)
                    rx_valid<=0;
                     end
@@ -99,20 +96,13 @@ always@(*)begin
         READ_DATA:begin
         if(counter>=0)begin
                 rx_data[counter] <= MOSI;
-                counter<=counter-1;end
-                if(counter==8)begin
-                rx_valid<=1;
-  end
+           
                 if(counter==0)begin
                 rx_valid<=0;
                 counter<=10;
             end
             if(tx_valid==1)begin
-            if(counter1>=0)begin
-                MISO<=tx_data[counter1];
-                counter1<=counter1-1;
-                if(counter1==0)
-                counter1<=7;
+       \
             end
             read_sel<=0;
             end
