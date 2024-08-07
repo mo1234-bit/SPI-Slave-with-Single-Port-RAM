@@ -62,6 +62,16 @@ The single port asynchronous RAM module implements a memory block with a single 
 ### FSM "Finite State Machine"
 ![FSM](https://drive.google.com/uc?export=view&id=1hf9omcZ275hoKuVw7Ol5CuG-cZuh6jIJ)
 
+### Snippets from the waveforms captured from QuestaSim
+ write address
+<img width="952" alt="testbench1" src="https://github.com/user-attachments/assets/0bfadca5-9ff2-49a5-8b38-3f5392998340">
+ write data
+<img width="946" alt="testbench2" src="https://github.com/user-attachments/assets/749c2457-7b43-4e87-b4df-537cec010e4d">
+reading address
+<img width="939" alt="testbench3" src="https://github.com/user-attachments/assets/125f7ca1-cb63-4479-9e28-9bc9a8fb8328">
+reading data
+<img width="950" alt="testbench4" src="https://github.com/user-attachments/assets/f441e1db-87e7-4c0f-bb68-faeb4c75ded2">
+
 
 
 ## Using Vivado
@@ -82,7 +92,7 @@ source run.tcl
 > It will be better if you write a constrain file depending on the target FPGA.
 
 > [!NOTE]
-> constrain file written for specific FPGA "XC7A35TICPG236".
+> constrain file written for specific FPGA "xc7a35ticpg236-1L".
 
 
 
